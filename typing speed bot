@@ -1,0 +1,205 @@
+from selenium.webdriver.common.keys import Keys
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+import time
+
+
+path = 'C:\Program Files (x86)\chromedriver.exe'
+
+driver = webdriver.Chrome(path)
+driver.get('https://10fastfingers.com/typing-test/english')
+driver.implicitly_wait(1)
+def allow_cookie():
+	cooky_allow = driver.find_element_by_id('CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll')
+	action = ActionChains(driver)
+	action.click(cooky_allow)
+	action.perform()
+allow_cookie()
+def step1():
+	global listoftext1
+	text1 = driver.find_element_by_id('row1')
+	foundtext = text1.text
+	listoftext1 = []
+	for i in foundtext:
+	
+		listoftext1.append(i)
+	print(listoftext1)
+	print(len(listoftext1))
+
+step1()
+
+def fill1():
+	fillbox1 = driver.find_element_by_id('inputfield')
+	fillbox1.send_keys(listoftext1)
+
+fill1()
+
+def  step2():
+	global listoftext2
+	text2 = driver.find_element_by_id('row1')
+	foundtext1 = text2.text
+	listoftext2 = []
+	for i in foundtext1:
+		listoftext2.append(i)
+	
+	listoftext2 = listoftext2[int(len(listoftext1)):]
+	listoftext2.insert(0, " ")
+	print(listoftext2)
+step2()
+	
+def fill2():
+	fillbox1 = driver.find_element_by_id('inputfield')
+	fillbox1.send_keys(listoftext2)
+
+fill2()
+
+def  step3():
+	global listoftext3
+	text3 = driver.find_element_by_id('row1')
+	foundtext2 = text3.text
+	listoftext3 = []
+	for i in foundtext2:
+		listoftext3.append(i)
+	
+	listoftext3 = listoftext3[int(len(listoftext2)) :]
+	listoftext3.insert(0, " ")
+	print(listoftext3)
+step3()
+	
+def fill3():
+	fillbox1 = driver.find_element_by_id('inputfield')
+	fillbox1.send_keys(listoftext3)
+
+fill3()
+def  step4():
+	global listoftext4
+	text4 = driver.find_element_by_id('row1')
+	foundtext3 = text4.text
+	listoftext4 = []
+	for i in foundtext3:
+		listoftext4.append(i)
+	
+	listoftext4 = listoftext4[int(len(listoftext3)) :]
+	listoftext4.insert(0, " ")
+	print(listoftext4)
+step4()
+	
+def fill4():
+	fillbox1 = driver.find_element_by_id('inputfield')
+
+	fillbox1.send_keys(listoftext4)
+
+fill4()
+def  step5():
+	global listoftext5
+	text5 = driver.find_element_by_id('row1')
+	foundtext4 = text5.text
+	listoftext5 = []
+	for i in foundtext4:
+		listoftext5.append(i)
+	
+	listoftext5 = listoftext5[int(len(listoftext4)):]
+	listoftext5.insert(0, " ")
+	print(listoftext5)
+step5()
+	
+def fill5():
+	fillbox1 = driver.find_element_by_id('inputfield')
+	fillbox1.send_keys(listoftext5)
+
+fill5()
+
+def  step6():
+	global listoftext6
+	text6 = driver.find_element_by_id('row1')
+	foundtext5 = text6.text
+	listoftext6 = []
+	for i in foundtext5:
+		listoftext6.append(i)
+	
+	listoftext6 = listoftext6[int(len(listoftext5)):]
+	listoftext6.insert(0, " ")
+	print(listoftext6)
+step6()
+	
+def fill6():
+	fillbox1 = driver.find_element_by_id('inputfield')
+	fillbox1.send_keys(listoftext6)
+
+fill6()
+
+def  step7():
+	global listoftext7
+	text7 = driver.find_element_by_id('row1')
+	foundtext6 = text7.text
+	listoftext7 = []
+	for i in foundtext6:
+		listoftext7.append(i)
+	
+	listoftext7 = listoftext7[int(len(listoftext6)):]
+	listoftext7.insert(0, " ")
+	print(listoftext7)
+step7()
+	
+def fill7():
+	fillbox1 = driver.find_element_by_id('inputfield')
+	fillbox1.send_keys(listoftext7)
+
+fill7()
+
+def  step8():
+	global listoftext8
+	text8 = driver.find_element_by_id('row1')
+	foundtext7 = text8.text
+	listoftext8 = []
+	for i in foundtext7:
+		listoftext8.append(i)
+	
+	listoftext8 = listoftext8[int(len(listoftext7)):]
+	listoftext8.insert(0, " ")
+	print(listoftext8)
+step8()
+	
+def fill8():
+	fillbox1 = driver.find_element_by_id('inputfield')
+	fillbox1.send_keys(listoftext8)
+
+fill8()
+
+def  step9():
+	global listoftext9
+	text9 = driver.find_element_by_id('row1')
+	foundtext8 = text9.text
+	listoftext9 = []
+	for i in foundtext8:
+		listoftext9.append(i)
+	
+	listoftext9 = listoftext9[int(len(listoftext8)):]
+	listoftext9.insert(0, " ")
+	print(listoftext9)
+step9()
+	
+def fill9():
+	fillbox1 = driver.find_element_by_id('inputfield')
+	fillbox1.send_keys(listoftext9)
+
+fill9()
+
+def  step0():
+	global listoftext0
+	text0 = driver.find_element_by_id('row1')
+	foundtext9 = text0.text
+	listoftext0 = []
+	for i in foundtext9:
+		listoftext0.append(i)
+	
+	listoftext0 = listoftext0[int(len(listoftext9)):]
+	listoftext0.insert(0, " ")
+	print(listoftext0)
+step0()
+	
+def fill0():
+	fillbox1 = driver.find_element_by_id('inputfield')
+	fillbox1.send_keys(listoftext0)
+
+fill0()
